@@ -1,9 +1,9 @@
 const apiConstants = require('../constants/api.constants');
-//const userRouter   = require('');
+const forecastRouter   = require('../routes/api/forecast.routes');
 
 const configure = app => {
     
-    //app.use(`${apiConstants.API_PATH}/users`, userRouter);
+    app.use(`${apiConstants.API_PATH}/forecast`, forecastRouter);
 }
 
 module.exports = {
