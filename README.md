@@ -27,3 +27,10 @@ to start or build the application
 
 ## TODO with more time
 handle more validation and presentation UI layout.
+
+## sample input
+	"location": "Shuzenji",
+	"country" : "Japan"
+
+    "location": "Delhi",
+	"country" : "India"
