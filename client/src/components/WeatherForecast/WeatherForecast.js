@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 
 
 class WeatherForecast extends Component {
@@ -33,26 +33,26 @@ class WeatherForecast extends Component {
                         className="grey-text">
                     Country
                     </label>
-                    <input
+                    <MDBInput
                         type="text"
                         id="inputCountry"
                         name="country"
                         value={this.state.formData.country}
                         onChange= {this.handleChange}
-                        className="form-control"
+                        required
                     />
                     <br />
                     <label htmlFor="inputLocation"  
                         className="grey-text">
                     Location
                     </label>
-                    <input
+                    <MDBInput
                         type="text"
                         id="inputLocation"
                         name="location"
                         value={this.state.formData.location}
                         onChange= {this.handleChange}
-                        className="form-control"
+                        required
                     />
                     <br />
                     <div className="mt-4">

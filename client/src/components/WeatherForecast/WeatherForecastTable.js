@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import WeatherForecastRow from './WeatherForecastRow';
+import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 
 class WeatherForecastTable extends Component {
     state = { forecast: [], error: {}, status: "initial" };
@@ -36,7 +37,13 @@ class WeatherForecastTable extends Component {
 
         {this.props.forecastDetails.map((details, index) => {
           return (
-            <WeatherForecastRow key={index} details={details} />
+            <MDBContainer>
+              <MDBRow>
+                <MDBCol>
+                <WeatherForecastRow key={index} details={details} />
+                </MDBCol>
+              </MDBRow>
+            </MDBContainer>
           );
         })}
       </div>

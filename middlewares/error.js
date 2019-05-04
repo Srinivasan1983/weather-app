@@ -14,7 +14,7 @@ const error404 = (req, res, next) => {
 const handleRouteErrors = (error, req, res, next) => {
     
     if (expressConfig.isDevelopment) {
-        if(error.stack) console.error(error.stack)
+       // if(error.stack) console.error(error.stack)
         return res.status(error.status || 500).json({error: error.message})
     }
     return res.status(error.status || 500).json({error: 'Internal Server Error'})
